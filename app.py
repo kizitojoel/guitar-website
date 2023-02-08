@@ -15,7 +15,7 @@ app = Flask(__name__)
 #Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-#Configure session to use filesystem(insted of sign cookies)
+#Configure session to use filesystem(instead of sign cookies)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
@@ -29,11 +29,20 @@ db = SQL("sqlite:///guitar.db")
 def hello():
     return "Hello World"
 
+# Route for the register, including SQL support for storing usernames and passwords
+@app.route("/register", methods = ["GET", "POST"])
+def register():
+    if request.method == "GET":
+        return render_template("register.html")
+    else:
+        pass
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log our guitar user in"""
 
     session.clear()
+    if request.method == "GET":
+        return render_template("login.html")
 
-    return render_template("login.html")
