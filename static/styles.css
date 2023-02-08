@@ -11,3 +11,9 @@
     text-decoration: none;
     color: black;
 }
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}

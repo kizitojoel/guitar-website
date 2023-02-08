@@ -15,12 +15,15 @@
         <div class="d-flex"> 
            <div class="navbar-nav mx-3"><a class="link" href="/register">Register</a></div>
            <div class="navbar-nav mx-3"><a class="link" href="/login">Login</a></div>
+           {% if session["user_id"] %}
+           <div class="navbar-nav mx-3"><a href="/logout" class="link">Logout</a></div>
+           {% endif %}
         </div>
     </nav>
     <main class="container-fluid text-center p-5">
         {% block main %}{% endblock %}
     </main>
-    <footer class="text-center text-muted">Joel Kizito &copy 2023</footer>
+    <footer class="text-center text-muted py-3">Joel Kizito &copy 2023</footer>
     
     <script src="../static/guitar.js"></script>
 </body>
