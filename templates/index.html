@@ -1,5 +1,40 @@
 {% extends "layout.html" %}
 
 {% block main %}
-    <h3>This is the logged in page</h3>
+    <h3>Content</h3>
+    <div class="lessons h-50 w-75 d-flex p-3 flex-column mx-auto">
+        <div class="lesson-card">
+            <a href="lessons/lesson1.html">
+                <div>1</div>
+                <p class="mx-auto">Guitar Lesson 1</p>
+            </a>
+            <div class="status">&check;</div>
+        </div>
+        <div class="lesson-card">
+            <a href="lessons/lesson2.html">
+                <div>2</div>
+                <p class="mx-auto">Guitar Lesson 2</p>
+            </a>
+            <div class="status">&check;</div>
+        </div>
+        <div class="lesson-card">
+            <div>3</div>
+            <p>Guitar Lesson 3</p>
+            <div class="status">&check;</div>
+        </div>
+        <div class="lesson-card">
+            <a href="lessons/lesson3.html">
+                <div>4</div>
+                <p class="mx-auto">Guitar Lesson 4</p>
+            </a>
+            <div class="status">&check;</div>
+        </div>
+        <div class="lesson-card">
+            <a href="lessons/lesson4.html">
+                <div>5</div>
+                <p class="mx-auto">Guitar Lesson 5</p>
+            </a>
+            <div class="status">&check;</div>
+        </div>
+    </div>
 {% endblock %}
