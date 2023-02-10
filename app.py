@@ -93,6 +93,9 @@ def login():
     else:
         return render_template("login.html")
 
+@app.route("/lesson1", methods=["GET"])
+def lesson():
+    return render_template("lesson1.html")
 
 @app.route("/logout")
 def logout():
